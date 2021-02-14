@@ -1,0 +1,41 @@
+<div class="jumbotron container mt-3">
+    <h3>Edit Meme</h3>
+    <hr>
+</div>
+
+<br>
+
+<div class="jumbotron container">
+        <form action="/edit/{{id}}?_method=PATCH" method="POST" autocomplete="off">
+           <input type="hidden" name="_method" vlaue="PATCH">
+          <div class="row mb-3">
+    <label for="name" class="col-sm-2 col-form-label"> Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="name" id="name"  disabled placeholder="Enter Name" value="{{name}}" required>
+    </div>
+  </div>
+  
+
+   
+      <div class="row mb-3">
+        <label for="url" class="col-sm-2 col-form-label"> URL</label>
+        <div class="col-sm-10">
+         <input type="url" class="form-control" name="url" id="url" placeholder="Enter url" value="{{url}}" required>
+        </div>
+   
+    <div class="row mb-3">
+        <label for="caption" class="col-sm-2 col-form-label"> Caption</label>
+        <div class="col-sm-10">
+           <input type="text" class="form-control" name="caption" id="caption" placeholder="Enter caption" value="{{caption}}" required>
+        
+      </div>
+   </div>
+  </div>
+        <br>
+           <div class="row">
+               <div class="d-grid gap-2 col-6 mx-auto">
+                   <button type="submit" class="btn btn-primary btn-block ">Submit</button>
+               </div>
+           </div>
+        </form>
+    </div>
